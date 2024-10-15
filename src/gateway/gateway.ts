@@ -8,9 +8,12 @@ import {
 
 import { Server } from 'socket.io';
 
+// anotate it with websocketgateway
 @WebSocketGateway()
+// onmoduleinit for when an instance is created
 export class Mygateway implements OnModuleInit {
   @WebSocketServer()
+  // allows us get the connection instance
   server: Server;
 
   onModuleInit() {
